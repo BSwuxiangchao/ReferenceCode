@@ -1,0 +1,35 @@
+/* 按钮静止无操作样式 */
+QPushButton
+{
+	background-color: rgb(178,224,230);
+	font-family:宋体;
+	font-size:20px;
+	border-radius:9px;
+}
+
+/* 鼠标悬停在按钮上 */
+QPushButton:hover
+{
+	background-color: rgb(135,206,235);
+	font-family:宋体;
+	font-size: 20px;
+	border-radius: 9px;
+}
+
+/* 鼠标按下按钮 */
+QPushButton:pressed
+{
+	background-color: rgb(30,144,255);
+	color: white;
+	font-family:宋体;
+	font-size: 20px;
+	border-radius: 12px;
+}
+/* 按钮被禁用状态 */
+QPushButton:disabled
+{
+	background-color: rgb(192,192,192);
+	font-family:宋体;
+	font-size:20px;
+	border-radius:9px;
+}

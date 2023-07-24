@@ -1,0 +1,162 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+    <Filter Include="Def">
+      <UniqueIdentifier>{c243d078-1578-4970-9542-ce5176b2acf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Dump">
+      <UniqueIdentifier>{70579be5-d618-479d-9dad-1de11b7df81b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Os">
+      <UniqueIdentifier>{a18f18d8-a5fe-447e-972f-1cf0b1475a96}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Log">
+      <UniqueIdentifier>{b56560a9-e42c-467d-b4aa-e5ec5098eafd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Config">
+      <UniqueIdentifier>{90d55145-c4d2-491f-915c-99419ec9db86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Tool">
+      <UniqueIdentifier>{d1a19cda-a6d2-4c21-b6e0-533e71cde406}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Src\main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Dump\MiniDump.cpp">
+      <Filter>Dump</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Os\BgiSemaphore.cpp">
+      <Filter>Os</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Os\BgiThread.cpp">
+      <Filter>Os</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Os\BgiThreadPrivate.cpp">
+      <Filter>Os</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Log\BgiLogger.cpp">
+      <Filter>Log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Log\LogWrapper.cpp">
+      <Filter>Log</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Os\BgiLock.cpp">
+      <Filter>Os</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Os\LockWrapper.cpp">
+      <Filter>Os</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Config\BgiEnvironmentConfig.cpp">
+      <Filter>Config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Config\XmlConfigParser.cpp">
+      <Filter>Config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Config\IniConfigParser.cpp">
+      <Filter>Config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Config\JsonConfigParser.cpp">
+      <Filter>Config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Tool\BgiFileTools.cpp">
+      <Filter>Tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Tool\BgiDiskTools.cpp">
+      <Filter>Tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Tool\TransformCoding.cpp">
+      <Filter>Tool</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Src\Config\OperateXmlFile.cpp">
+      <Filter>Config</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Src\Def\ExternDef.h">
+      <Filter>Def</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Os\BgiSemaphore.h">
+      <Filter>Os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Os\BgiThread.h">
+      <Filter>Os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Def\LogDef.h">
+      <Filter>Def</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Log\BgiLogger.h">
+      <Filter>Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Log\LogWrapper.h">
+      <Filter>Log</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Os\BgiLock.h">
+      <Filter>Os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Os\LockWrapper.h">
+      <Filter>Os</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Config\ConfigParser.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Config\BgiEnvironmentConfig.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Config\XmlConfigParser.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Config\IniConfigParser.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Config\JsonConfigParser.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Tool\GeneralTool.h">
+      <Filter>Tool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Tool\BgiFileTools.h">
+      <Filter>Tool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Tool\BgiDiskTools.h">
+      <Filter>Tool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Def\DiskDef.h">
+      <Filter>Def</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Def\ConstDef.h">
+      <Filter>Def</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Tool\TransformCoding.h">
+      <Filter>Tool</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Src\Config\OperateXmlFile.h">
+      <Filter>Config</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\Src\Os\BgiThreadPrivate.h">
+      <Filter>Os</Filter>
+    </QtMoc>
+    <QtMoc Include="..\Src\Dump\MiniDump.h">
+      <Filter>Dump</Filter>
+    </QtMoc>
+  </ItemGroup>
+</Project>

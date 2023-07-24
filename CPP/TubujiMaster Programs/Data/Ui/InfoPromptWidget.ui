@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>InfoPromptWidget</class>
+ <widget class="QWidget" name="InfoPromptWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>358</width>
+    <height>211</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>温馨提示</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">/* 窗口 */
+QDialog
+{
+	border-radius:26px;
+}
+/* 按钮静止无操作样式 */
+QPushButton
+{
+	background-color: rgb(146,254,255);
+	color:blue;
+	border:2px solid rgb(6,168,255);
+	font-size:16px;
+	border-radius:6px;
+}
+
+/* 鼠标悬停在按钮上 */
+QPushButton:hover
+{
+	background-color: rgb(88,198,255);
+	color: blue;
+	border: 2px solid rgb(6,168,255);
+	font-size: 16px;
+	border-radius: 6px;
+}
+
+/* 鼠标按下按钮 */
+QPushButton:pressed
+{
+	background-color: rgb(47,184,255);
+	color: white;
+	border: 2px solid rgb(6,168,255);
+	font-size: 14px;
+	border-radius: 8px;
+}</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="1,4,1">
+   <property name="spacing">
+    <number>0</number>
+   </property>
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="labelTitle">
+     <property name="styleSheet">
+      <string notr="true">color:blue;
+background-color: rgb(169,251,193); 
+font:16pt;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="text">
+      <string>标题</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTextEdit" name="textEditContext">
+     <property name="font">
+      <font>
+       <family>Arial</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::NoFrame</enum>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout" stretch="1,1">
+     <property name="spacing">
+      <number>40</number>
+     </property>
+     <property name="leftMargin">
+      <number>6</number>
+     </property>
+     <property name="topMargin">
+      <number>6</number>
+     </property>
+     <property name="rightMargin">
+      <number>6</number>
+     </property>
+     <property name="bottomMargin">
+      <number>6</number>
+     </property>
+     <item>
+      <widget class="QPushButton" name="pushButtonSure">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>确定</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="pushButtonCancel">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>30</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>取消</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,2293 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EpsonRobotDebugClass</class>
+ <widget class="QMainWindow" name="EpsonRobotDebugClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>680</width>
+    <height>853</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>EpsonDebug</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="verticalLayout_2">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>动作</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout" stretch="1,4,1,2,1,1">
+        <item>
+         <widget class="QGroupBox" name="groupBox_WorkStatus2">
+          <property name="font">
+           <font>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="title">
+           <string>状态</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_20" stretch="1,1,1,1,2">
+           <property name="spacing">
+            <number>20</number>
+           </property>
+           <property name="topMargin">
+            <number>2</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_14" stretch="0,1">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_22">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>紧急停止：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_PauseSwitch_2">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>关</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_16" stretch="0,1">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_23">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>安全防护：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_SecuritySwitch_2">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>关</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_18" stretch="0,1">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_25">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>运行功率：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_MotorPower_2">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>关</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_17" stretch="0,1">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_24">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>电机：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_MotorSwitch_2">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>关</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_19" stretch="0,1">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_Error_2">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>错误码：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_ErrCode_2">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_11">
+          <property name="title">
+           <string>参数</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_21">
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="groupBox_12">
+             <property name="title">
+              <string>设置</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_4">
+              <property name="topMargin">
+               <number>2</number>
+              </property>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <item>
+                 <widget class="QLabel" name="label_16">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>机械臂运行功率</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QComboBox" name="comboBox_Power">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <item>
+                   <property name="text">
+                    <string>低</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>高</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_SetPower">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>设置</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_6">
+                <item>
+                 <widget class="QLabel" name="label_18">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>PTP速度：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_SetPTPSpeed">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="toolTip">
+                   <string>愤愤愤愤</string>
+                  </property>
+                  <property name="inputMask">
+                   <string/>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="placeholderText">
+                   <string>Range：[1-100]</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_SetPTPSpeed">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>设置</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_7">
+                <item>
+                 <widget class="QLabel" name="label_19">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>PTP加速度：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_SetPTPAccel">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="placeholderText">
+                   <string>Range：[1-120]</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_SetPTPAccel">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>设置</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_8">
+                <item>
+                 <widget class="QLabel" name="label_20">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>CP速度：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_SetCPSpeed">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="placeholderText">
+                   <string>Range：[1-2000]</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_SetCPSpeed">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>设置</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_9">
+                <item>
+                 <widget class="QLabel" name="label_21">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>CP加速度：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_SetCPAccel">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="placeholderText">
+                   <string>Range：[1-25000]</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_SetCPAccel">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>设置</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_53">
+                <item>
+                 <widget class="QLabel" name="label_40">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>R速度：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_SetRSpeed">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="placeholderText">
+                   <string>Range：[1-1000]</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_SetRSpeed">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>设置</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_49">
+                <item>
+                 <widget class="QLabel" name="label_36">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>R加速度：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_SetRAccel">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="placeholderText">
+                   <string>Range：[1-5000]</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_SetRAccel">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>设置</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="groupBox_ParaRead">
+             <property name="title">
+              <string>读取</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <property name="topMargin">
+               <number>2</number>
+              </property>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_10">
+                <item>
+                 <widget class="QLabel" name="label">
+                  <property name="text">
+                   <string>机械臂编号：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_GetRobotNo">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_11">
+                <item>
+                 <widget class="QLabel" name="label_32">
+                  <property name="text">
+                   <string>PTP速度：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_GetPTPSpeed">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_12">
+                <item>
+                 <widget class="QLabel" name="label_33">
+                  <property name="text">
+                   <string>PTP加速度：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_GetPTPAccel">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_13">
+                <item>
+                 <widget class="QLabel" name="label_34">
+                  <property name="text">
+                   <string>CP速度：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_GetCPSpeed">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_15">
+                <item>
+                 <widget class="QLabel" name="label_35">
+                  <property name="text">
+                   <string>CP加速度：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_GetCPAccel">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_55">
+                <item>
+                 <widget class="QLabel" name="label_42">
+                  <property name="text">
+                   <string>R速度：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_GetRSpeed">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_57">
+                <item>
+                 <widget class="QLabel" name="label_44">
+                  <property name="text">
+                   <string>R加速度：</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLineEdit" name="lineEdit_GetRAccel">
+                  <property name="font">
+                   <font>
+                    <pointsize>12</pointsize>
+                   </font>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                  <property name="readOnly">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_8">
+          <property name="title">
+           <string>机器人指令</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_5">
+           <property name="topMargin">
+            <number>2</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <property name="spacing">
+              <number>12</number>
+             </property>
+             <item>
+              <widget class="QPushButton" name="pushButton_GoPasePoint">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>31</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>回原点</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_GoHome">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>31</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>Go Home</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_OpenGripper">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>31</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>开夹手</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_CloseGripper">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>31</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>关夹手</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_9">
+          <property name="title">
+           <string>转移指令</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_6">
+           <property name="topMargin">
+            <number>2</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_2" stretch="0,0,0">
+             <property name="spacing">
+              <number>50</number>
+             </property>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_4" stretch="0,5">
+               <property name="spacing">
+                <number>3</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_17">
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>起点区</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="comboBox_StartPos">
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>AnyWhere</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Home</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>中转槽等待区</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>风刀口</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>风刀口等待区</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>涂布机等待区</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>光机等待区</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>沥液区</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_3" stretch="0,5">
+               <property name="spacing">
+                <number>3</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_3">
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>终点区</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="comboBox_EndPos">
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>Home</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>中转槽等待区</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>风刀口</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>风刀口等待区</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>涂布机等待区</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>光机等待区</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>沥液区</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_Transfer">
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>转移</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_4">
+             <property name="frameShape">
+              <enum>QFrame::HLine</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Sunken</enum>
+             </property>
+             <property name="lineWidth">
+              <number>1</number>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_44">
+             <property name="spacing">
+              <number>50</number>
+             </property>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_46" stretch="0,5">
+               <property name="spacing">
+                <number>3</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_30">
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>位   置</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="comboBox_ChipPosition">
+                 <item>
+                  <property name="text">
+                   <string>中转槽</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>涂布机</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>光机</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_45" stretch="0,5">
+               <property name="spacing">
+                <number>3</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="label_31">
+                 <property name="font">
+                  <font>
+                   <pointsize>12</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>操   作</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="comboBox_OptChips">
+                 <item>
+                  <property name="text">
+                   <string>放芯片---&gt;进</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>放芯片---&gt;出</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>取芯片---&gt;进</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>取芯片---&gt;出</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>沥液&lt;===&gt;开始</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>沥液&lt;===&gt;结束</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_StartOptChip">
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>启动</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox">
+          <property name="title">
+           <string>IO操作</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_48">
+           <property name="spacing">
+            <number>50</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_47" stretch="0,1">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="text">
+                <string>IO标签或IO编号</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_IOSign">
+               <property name="editable">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_TurnOnIO">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>打开</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_TurnOffIO">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>关闭</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_7">
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_22">
+             <item>
+              <spacer name="horizontalSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_MergencyStop">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>16</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>紧急停止</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="horizontalSpacer_2">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>类RC调试</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_10" stretch="1,1,2,6">
+        <item>
+         <widget class="QGroupBox" name="groupBox_WorkStatus1">
+          <property name="title">
+           <string>状态</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_29" stretch="1,1,1,1,2">
+           <property name="spacing">
+            <number>20</number>
+           </property>
+           <property name="topMargin">
+            <number>2</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_24" stretch="0,1">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_29">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>紧急停止：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_PauseSwitch">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>关</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_25" stretch="0,1">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_27">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>安全防护：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_SecuritySwitch">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>关</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_26" stretch="0,1">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_26">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>电机：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_MotorSwitch">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>关</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_27" stretch="0,1">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_28">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>运行功率：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_MotorPower">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>低</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_28" stretch="0,1">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_Error">
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="text">
+                <string>错误码：</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_ErrCode">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="font">
+                <font>
+                 <pointsize>11</pointsize>
+                </font>
+               </property>
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="title">
+           <string>电机</string>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_30" stretch="1,0,1,0,1">
+           <property name="topMargin">
+            <number>2</number>
+           </property>
+           <item>
+            <widget class="QPushButton" name="pushButton_motorOff">
+             <property name="text">
+              <string>MOTOR
+OFF</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_3">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_motorOn">
+             <property name="text">
+              <string>MOTOR
+ON</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_MotorReset">
+             <property name="font">
+              <font>
+               <pointsize>16</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>重置</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="title">
+           <string>快捷</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_9" stretch="1,1">
+           <property name="topMargin">
+            <number>2</number>
+           </property>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_32" stretch="1,1">
+             <item>
+              <widget class="QPushButton" name="pushButton_LowSpeed">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>切换到Move速度</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_HighSpeed">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>切换到Go速度</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_31" stretch="1,1">
+             <item>
+              <widget class="QPushButton" name="pushButton_RealoadScript">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>重载脚本</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_Abort">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="text">
+                <string>紧急停止</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QFrame" name="frame_2">
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QHBoxLayout" name="horizontalLayout_23" stretch="1,1">
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="groupBox_3">
+             <property name="title">
+              <string>步进</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_26">
+              <property name="spacing">
+               <number>10</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_38" stretch="1,1,1,1">
+                <property name="spacing">
+                 <number>20</number>
+                </property>
+                <item>
+                 <spacer name="horizontalSpacer_7">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_StepLowY">
+                  <property name="font">
+                   <font>
+                    <pointsize>20</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>-Y</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_6">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_StepHighZ">
+                  <property name="font">
+                   <font>
+                    <pointsize>20</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>+Z</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_39" stretch="1,1,1,1">
+                <property name="spacing">
+                 <number>20</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="pushButton_StepHighX">
+                  <property name="font">
+                   <font>
+                    <pointsize>20</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>+X</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_8">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_StepLowX">
+                  <property name="font">
+                   <font>
+                    <pointsize>20</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>-X</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_9">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_40" stretch="1,1,1,1">
+                <property name="spacing">
+                 <number>20</number>
+                </property>
+                <item>
+                 <spacer name="horizontalSpacer_10">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_StepHighY">
+                  <property name="font">
+                   <font>
+                    <pointsize>20</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>+Y</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_11">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_StepLowZ">
+                  <property name="font">
+                   <font>
+                    <pointsize>20</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>-Z</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_41" stretch="1,1,1">
+                <property name="spacing">
+                 <number>20</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="pushButton_StepLowU">
+                  <property name="font">
+                   <font>
+                    <pointsize>20</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>-U</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_StepLowV">
+                  <property name="font">
+                   <font>
+                    <pointsize>20</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>-V</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_StepLowW">
+                  <property name="font">
+                   <font>
+                    <pointsize>20</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>-W</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_42" stretch="1,1,1">
+                <property name="spacing">
+                 <number>20</number>
+                </property>
+                <item>
+                 <widget class="QPushButton" name="pushButton_StepHighU">
+                  <property name="font">
+                   <font>
+                    <pointsize>20</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>+U</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_StepHighV">
+                  <property name="font">
+                   <font>
+                    <pointsize>20</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>+V</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="pushButton_StepHighW">
+                  <property name="font">
+                   <font>
+                    <pointsize>20</pointsize>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>+W</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QFrame" name="frame_3">
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_8" stretch="3,3,1">
+              <item>
+               <widget class="QGroupBox" name="groupBox_RobotPoint">
+                <property name="title">
+                 <string>目前位置（世界）</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_17">
+                 <property name="topMargin">
+                  <number>2</number>
+                 </property>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_33">
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_11">
+                     <item>
+                      <widget class="QLabel" name="label_4">
+                       <property name="text">
+                        <string>X(mm)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="lineEdit_PosX">
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="readOnly">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_13">
+                     <item>
+                      <widget class="QLabel" name="label_5">
+                       <property name="text">
+                        <string>Y(mm)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="lineEdit_PosY">
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="readOnly">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_14">
+                     <item>
+                      <widget class="QLabel" name="label_6">
+                       <property name="text">
+                        <string>Z(mm)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="lineEdit_PosZ">
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="readOnly">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_34">
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_12">
+                     <item>
+                      <widget class="QLabel" name="label_8">
+                       <property name="text">
+                        <string>U(deg)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="lineEdit_PosU">
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="readOnly">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_15">
+                     <item>
+                      <widget class="QLabel" name="label_9">
+                       <property name="text">
+                        <string>V(deg)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="lineEdit_PosV">
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="readOnly">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_16">
+                     <item>
+                      <widget class="QLabel" name="label_7">
+                       <property name="text">
+                        <string>W(deg)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QLineEdit" name="lineEdit_PosW">
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="readOnly">
+                        <bool>true</bool>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="groupBox_5">
+                <property name="title">
+                 <string>步进距离</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_24">
+                 <property name="topMargin">
+                  <number>2</number>
+                 </property>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_35">
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_18">
+                     <item>
+                      <widget class="QLabel" name="label_14">
+                       <property name="text">
+                        <string>X(mm)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QSpinBox" name="spinBox_Step_X">
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="maximum">
+                        <number>20</number>
+                       </property>
+                       <property name="value">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_19">
+                     <item>
+                      <widget class="QLabel" name="label_12">
+                       <property name="text">
+                        <string>Y(mm)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QSpinBox" name="spinBox_Step_Y">
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="maximum">
+                        <number>20</number>
+                       </property>
+                       <property name="value">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_20">
+                     <item>
+                      <widget class="QLabel" name="label_13">
+                       <property name="text">
+                        <string>Z(mm)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QSpinBox" name="spinBox_Step_Z">
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="maximum">
+                        <number>20</number>
+                       </property>
+                       <property name="value">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_36">
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_21">
+                     <item>
+                      <widget class="QLabel" name="label_10">
+                       <property name="text">
+                        <string>U(deg)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QSpinBox" name="spinBox_Step_U">
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="maximum">
+                        <number>15</number>
+                       </property>
+                       <property name="value">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_22">
+                     <item>
+                      <widget class="QLabel" name="label_11">
+                       <property name="text">
+                        <string>V(deg)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QSpinBox" name="spinBox_Step_V">
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="maximum">
+                        <number>15</number>
+                       </property>
+                       <property name="value">
+                        <number>10</number>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QVBoxLayout" name="verticalLayout_23">
+                     <item>
+                      <widget class="QLabel" name="label_15">
+                       <property name="text">
+                        <string>W(deg)</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QSpinBox" name="spinBox_Step_W">
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="maximum">
+                        <number>15</number>
+                       </property>
+                       <property name="value">
+                        <number>5</number>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="groupBox_7">
+                <property name="title">
+                 <string>执行动作</string>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_25">
+                 <property name="topMargin">
+                  <number>2</number>
+                 </property>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_37" stretch="1,3,1">
+                   <item>
+                    <widget class="QComboBox" name="comboBox_CommandClass">
+                     <item>
+                      <property name="text">
+                       <string>Go</string>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string>Move</string>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="comboBox_PosVar">
+                     <property name="editable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="placeholderText">
+                      <string/>
+                     </property>
+                     <property name="duplicatesEnabled">
+                      <bool>false</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pushButton_GoVar">
+                     <property name="text">
+                      <string>执行</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>680</width>
+     <height>22</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+  </widget>
+  <widget class="QStatusBar" name="statusBar"/>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>

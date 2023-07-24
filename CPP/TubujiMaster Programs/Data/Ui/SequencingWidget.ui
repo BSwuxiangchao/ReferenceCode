@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SequencingWidgetClass</class>
+ <widget class="QWidget" name="SequencingWidgetClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>SequencingWidget</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <property name="leftMargin">
+    <number>1</number>
+   </property>
+   <property name="topMargin">
+    <number>6</number>
+   </property>
+   <property name="rightMargin">
+    <number>2</number>
+   </property>
+   <property name="bottomMargin">
+    <number>2</number>
+   </property>
+   <item row="0" column="0">
+    <widget class="QTableWidget" name="tableWidget_sequencingInfo">
+     <property name="rowCount">
+      <number>2</number>
+     </property>
+     <property name="columnCount">
+      <number>11</number>
+     </property>
+     <row/>
+     <row/>
+     <column/>
+     <column/>
+     <column/>
+     <column/>
+     <column/>
+     <column/>
+     <column/>
+     <column/>
+     <column/>
+     <column/>
+     <column/>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
