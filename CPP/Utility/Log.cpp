@@ -1,3 +1,4 @@
+//æˆ‘æ˜¯åœ¨æµ‹è¯•One-Branch
 #include <tchar.h>
 #include <io.h>
 #include "Log.h"
@@ -90,7 +91,7 @@ void Clog::Init(const char *configFileName)
 {
 	SetWorkDirectory();
 
-	//Æô¶¯ÈÕÖ¾
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö¾
 	if (-1 == (_access(configFileName, 0)))
 	{
 		return;
@@ -109,7 +110,7 @@ void Clog::SetWorkDirectory()
 	TCHAR* p = _tcsrchr(filePath, _T('\\'));
 	*p = '\0';
 
-	// ÉèÖÃµ±Ç°¹¤×÷Ä¿Â¼£¬±ÜÃâ³ÌÐòµÄÏà¶ÔÂ·¾¶¸Ä±äÊ±ÕÒ²»µ½ÅäÖÃÎÄ¼þ
+	// ï¿½ï¿½ï¿½Ãµï¿½Ç°ï¿½ï¿½ï¿½ï¿½Ä¿Â¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â·ï¿½ï¿½ï¿½Ä±ï¿½Ê±ï¿½Ò²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 	SetCurrentDirectory(filePath);
 }
 
