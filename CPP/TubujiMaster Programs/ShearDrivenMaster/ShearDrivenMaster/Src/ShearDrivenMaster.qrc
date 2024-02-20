@@ -1,6 +1,0 @@
-<RCC>
-    <qresource prefix="/ShearDrivenMaster">
-        <file>2.ico</file>
-        <file>Login.jpg</file>
-    </qresource>
-</RCC>
